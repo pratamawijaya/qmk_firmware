@@ -1,8 +1,6 @@
 OLED_ENABLE = yes
 ENCODER_ENABLE = yes
-CONSOLE_ENABLE = no
 WPM_ENABLE = yes
-EXTRAKEY_ENABLE = yes
 ENCODER_MAP_ENABLE = yes
 
 #Debug options
