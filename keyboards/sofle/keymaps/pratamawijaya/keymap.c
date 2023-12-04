@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * | ESC  |   A  |   O  |   E  |   U  |   I  |-------.    ,-------|   D  |   H  |   T  |   N  |   S  |  = - |
  * |------+------+------+------+------+------|  MUTE |    |       |------+------+------+------+------+------|
- * |LShift|   ;  |   Q  |   J  |   K  |   X  |-------|    |-------|   B  |   M  |   W |   V  |   Z  |RShift|
+ * |LShift|   ;  |   Q  |   J  |   K  |   X  |-------|    |-------|   B  |   M  |   W |   V  |   Z  |  - _  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *            | LCtl | LAlt | LGUI |SPACE | /  MO2   /      \  MO3 \   |ENTER |RShift| RAlt | RCtl |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_GRV,   KC_1,   KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,  KC_SLSH,
   KC_TAB,   KC_QUOT,KC_COMM, KC_DOT,  KC_P,    KC_Y,                      KC_F,    KC_G,    KC_C,    KC_R,    KC_L,  KC_BSPC,
   KC_ESC,   KC_A,   KC_O,    KC_E,    KC_U,    KC_I,                      KC_D,    KC_H,    KC_T,    KC_N,    KC_S,  KC_EQL,
-  KC_LSFT,  KC_SCLN,KC_Q,    KC_J,    KC_K,    KC_X, KC_MUTE,      XXXXXXX,KC_B,   KC_M,    KC_W,    KC_V,    KC_Z, KC_RSFT,
+  KC_LSFT,  KC_SCLN,KC_Q,    KC_J,    KC_K,    KC_X, KC_MUTE,      XXXXXXX,KC_B,   KC_M,    KC_W,    KC_V,    KC_Z, KC_MINS,
                 KC_LCTL, KC_LALT, KC_LGUI, KC_SPC, MO(_LOWER),    MO(_RAISE), KC_ENT, KC_RSFT, KC_RALT, KC_RCTL
 ),
 /*
@@ -111,8 +111,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *            `----------------------------------'           '------''---------------------------'
  */
 [_RAISE] = LAYOUT(
-  TO(0), _______ , _______ , _______ , _______ , _______,                           _______,  _______  , _______,  _______ ,  _______ ,_______,
-  TO(1),  KC_INS,  KC_PSCR,   KC_APP,  XXXXXXX, XXXXXXX,                        KC_PGUP, KC_PRVWD,   KC_UP, KC_NXTWD,KC_DLINE, KC_BSPC,
+  TO(_DVORAK), _______ , _______ , _______ , _______ , _______,                           _______,  _______  , _______,  _______ ,  _______ ,_______,
+  TO(_QWERTY),  KC_INS,  KC_PSCR,   KC_APP,  XXXXXXX, XXXXXXX,                        KC_PGUP, KC_PRVWD,   KC_UP, KC_NXTWD,KC_DLINE, KC_BSPC,
   _______, KC_LALT,  KC_LCTL,  KC_LSFT,  XXXXXXX, KC_CAPS,                       KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT,  KC_DEL, KC_BSPC,
   _______,KC_UNDO, KC_CUT, KC_COPY, KC_PASTE, XXXXXXX,  _______,       _______,  XXXXXXX, KC_LSTRT, XXXXXXX, KC_LEND,   XXXXXXX, _______,
                          _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
